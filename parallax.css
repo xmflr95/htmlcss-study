@@ -1,0 +1,16 @@
+#ms1 {
+    background-image: url('background.jpg');
+}
+
+#ms2 {
+    background-image: url('image2.jpg');
+}
+
+#ms3 {
+    background-image: url('image4.jpg');
+}
+
+.bg-holder {
+    width: 100%;
+    height: 100%;
+}

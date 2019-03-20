@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1_1">HTML5 끝내기</h1>
+    <h2><mark><em>이탤릭 형광펜효과</em></mark> 제목 h2 태그</h2>
+    <p><strong>특보</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dicta quaerat sed, iusto temporibus, corrupti?</p>
+    <p><span style="color: blue;">Lorem ipsum dolor sit amet,</span> consectetur adipisicing elit. Repudiandae, ullam dolore aliquid eius.</p>
+    <hr>
+    <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fugiat, distinctio non amet commodi ex repudiandae voluptatum minima cupiditate cumque, dignissimos similique optio exercitationem, ad doloribus ipsa reprehenderit? Magnam voluptas, consectetur minima eum soluta maxime.
+        <br><br>
+        <q cite="https://www.google.com">구글(인용 태그 q)</q><br>
+        <ruby>자급자족<rt>ㄱㄱㄱㄱ</rt>(주석태그 ruby, rt)</ruby>
+    </blockquote>
+    <h4><a href="#imageMap">이미지 맵으로가기</a></h4>
+    <hr>
+    <h1 id="list">리스트</h1>
+    <ul>
+        <li>1일차
+            <ol type="a">
+                <li>박물관</li>
+                <li>로렘</li>
+            </ol>
+        </li>
+        <br>
+        <li>2일차
+            <ol type="a" start="3">
+                <li>lorem3</li>
+                <li>lorem4</li>
+                <li>lorem5</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h1 id="table">테이블</h1>
+    <figure>
+        <figcaption>표 제목</figcaption>
+        <table border="1">
+            <tr>
+                <th>1행 1열(제목</th>
+                <td>1행 2열</td>
+                <td>1행 3열</td>
+            </tr>
+            <tr>
+                <th>2행 1열(제목</th>
+                <td>2행 2열</td>
+                <td>2행 3열</td>
+            </tr>
+        </table>
+    </figure>
+    <br>
+    <table border="1">
+        <colgroup>
+            <col style="width: 100px;">
+            <col style="width: 300px;">
+            <col style="width: 100px;">
+            <col style="width: 300px;">
+        </colgroup>
+        <tr>
+            <th>이름</th>
+            <td></td>
+            <th>연락처</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td colspan="3"></td>
+        </tr>
+    </table>
+    <hr>
+    <h1 id="image">Img</h1>
+    <figure>
+        <img style="width: 90%; height: 90%;" src="image1.jpg" alt="홈으로가기">
+        <figcaption> 좋은 배경화면 (figcaption)</figcaption>
+    </figure>
+    <hr>
+    <h1>하이퍼 링크</h1>
+    <a href="https://www.naver.com" target="_blank">네이버 (새창)</a>
+    <br>
+    <a href="https://www.daum.net">다음</a>
+    <br>
+    <h3>바로가기</h3>
+    <ul id="menu">
+        <li><a href="#h1_1">제목</a></li>
+        <li><a href="#list">리스트</a></li>
+        <li><a href="#table">표</a></li>
+        <li><a href="#image">이미지</a></li>
+    </ul>
+    <hr>
+    <h1 id="imageMap">이미지 맵</h1>
+    <p>이미지 왼쪽 클릭시 제목으로, 오른쪽 부분은 클릭시 네이버 (새창)</p>
+    <img style="width: 400px; height: 250px;" src="image2.jpg" alt="" usemap="#favor">
+    <map name="favor">
+        <area shape="rect" coords="10,10,160,200" href="#h1_1" target="_self" alt="제목으로 가기">
+        <area shape="rect" coords="180,10,380,210" href="https://www.naver.com" target="_blank" alt="네이버 가기">
+    </map>
+    <hr>
+    <h1>Form</h1>
+    <form action="#" method="post">
+        <label>기본적인 구성 :</label>
+        <input type="text" title="검색" placeholder="검색">
+        <input type="submit" value="검색">
+    </form>
+    <br>
+    <form>
+        <label>fieldset 이용 : <br>
+            <fieldset>
+                <legend>개인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="name">이름</label>
+                        <input type="text" id="name">
+                    </li>
+                    <li>
+                        <label for="mail">메일 주소</label>
+                        <input type="text" id="mail">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>로그인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="id">아이디</label>
+                        <input type="text" id="id">
+                    </li>
+                    <li>
+                        <label for="pwd">비밀번호</label>
+                        <input type="text" id="pwd">
+                    </li>
+                </ul>
+            </fieldset>
+        </label>
+    </form>
+    <br>
+    <form>
+        <label>hidden 존재 중<input type="hidden" name="이름" value="서버로 넘김"></label>
+    </form>
+    <br>
+    <form>
+        <label>text 속성 : <input type="text" placeholder="입력 해보기"></label><br>
+        <label>password 속성 : <input type="password" placeholder="입력 해보기"></label><br>
+        <label>search 속성 : <input type="search" placeholder="입력 해보기"></label><br>
+        <label>range 속성 : <input type="range" min="1" max="5" value="1"></label><br>
+        <label>radio 속성 : </label>
+        <label><input type="radio" name="subject" value="speaking">회화</label>
+        <label><input type="radio" name="subject" value="grammer">문법</label>
+        <label><input type="radio" name="subject" value="writing">작문</label><br>
+        <label>checkbox 속성 : </label>
+        <label><input type="checkbox" name="mailing1" value="news">해외 단신</label>
+        <label><input type="checkbox" name="mailing2" value="dialog">5분 회화</label>
+        <label><input type="checkbox" name="mailing3" value="pops">모닝 팝스</label>
+    </form><br>
+    <form method="post">
+        <label>메일 주소 <input type="text"></label>
+        <input type="submit" value="제출">
+        <input type="reset" value="다시입력">
+    </form><br>
+    <form>
+        <label>아이디 <input type="text" size="15"></label>
+        <label>비밀번호 <input type="password" size="15"></label>
+        <input style="width: 20px; height: 20px;" type="image" id="butt" src="login.png" alt="login">
+    </form><br>
+    <form method="post">
+        <label>required 사용 : </label>
+        <label class="req" for="uname">이름</label>
+        <input type="text" id="uname" required placeholder="입력하지 않고 검색 버튼 클릭">
+        <input type="submit" value="검색">
+    </form><br>
+    <hr>
+    <h1>여러 데이터 나열해 보여주기</h1>
+    <select id="class">
+        <optgroup label="공과대학">
+            <option value="archi">건축공학과</option>
+            <option value="mecha">기계공학과</option>
+            <option value="indus">산업공학과</option>
+            <option value="elec">전기전자공학과</option>
+            <option value="com">컴퓨터공학과</option>
+        </optgroup>
+        <optgroup label="인문대학">
+            <option value="history">사학과</option>
+            <option value="lang">어문학부</option>
+            <option value="philo">철학과</option>
+        </optgroup>
+    </select><br>
+    <label>datalist -> (클릭) </label>
+    <input type="text" id="interest" list="choices">
+    <datalist id="choices">
+        <option value="grammer" label="문법"></option>
+        <option value="voca" label="어휘"></option>
+        <option value="speaking" label="회화"></option>
+        <option value="listenning" label="리스닝"></option>
+    </datalist><br>
+    <form>
+        <label>버튼 (button) : </label>
+        <button type="button">버튼</button>
+    </form><br>
+    <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+        <label>output 사용 : </label>
+        <input type="number" name="num1" value="0">+<input type="number" name="num2" value="0">=<output name="result" for="num"></output>
+    </form><br>
+    <form>
+       <label>progress 이용 : </label><br>
+        <label>10초 남음</label>
+        <progress value="50" max="60"></progress><br>
+        <label>진행률 30%</label>
+        <progress value="30" max="100"></progress>
+    </form><br>
+    <form>
+       <label>meter 이용 : </label><br>
+        <label>점유율 0.8</label>
+        <meter value="0.8"></meter><br>
+        <label>사용량 64%</label>
+        <meter value="64" max="100"></meter>
+    </form>
+</body>
+
+</html>

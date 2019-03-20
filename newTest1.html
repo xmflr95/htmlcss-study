@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="vg.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+    <script src="semantic/semantic.min.js"></script>
+    <!-- 슬라이드 배경 -->
+
+
+    <title>풀스크린 배경</title>
+
+    <style>
+        .fH1 {
+            font-family: sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .fH3 {
+            font-family: monospace;
+            font-size: 2rem;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #btn {
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #339af0;
+        }
+        
+        #btn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <img id="introImg" border="0">
+        <h1 class="fH1">Fullscreen Image</h1>
+        <p><strong>
+                <h3 class="fH3">Welcome Lorem ipsum dolor sit amet.</h3>
+            </strong></p>
+        <button id="btn" class="ui primary button">시작하기</button>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript">
+        var imgArray = new Array();
+        imgArray[0] = "image2.jpg";
+        imgArray[1] = "image4.jpg";
+        imgArray[2] = "background.jpg";
+
+        function showImage() {
+            var imgNum = Math.round(Math.random() * 2);
+            var objImg = document.getElementById("introImg");
+            objImg.src = imgArray[imgNum];
+            setTimeout("showImage()", 3000);
+        }
+    </script>
+
+</body>
+</html>

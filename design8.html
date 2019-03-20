@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="bxslider-4-4.2.12/dist/jquery.bxslider.css">
+        
+    <style>
+        #wrapper {
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+    <title>캐러셀</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="bxslider">
+            <div>
+                <img src="background.jpg" title="첫번째 이미지">
+            </div>
+            <div>
+                <img src="image2.jpg" title="두번째 이미지">
+            </div>
+            <div>
+                <img src="image3.JPG" title="세번째 이미지">
+            </div>
+            <div>
+                <img src="image4.jpg" title="네번째 이미지">
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="bxslider-4-4.2.12/dist/jquery.bxslider.js"></script>
+    
+    <script>
+        $(() => {
+            $('.bxslider').bxSlider({
+                slideWidth: 600,
+                captions: true,
+                auto : true,
+                autoControls: true,
+                stopAutoOnclick:true
+            });
+        })
+    </script>
+</body>
+</html>
